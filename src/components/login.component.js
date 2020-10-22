@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 
+
 class LoginPage extends Component {
   constructor() {
     super();
@@ -32,12 +33,13 @@ class LoginPage extends Component {
 
 
     if (!this.state.password) {
-      console.console.log('Password is required');
+
+    console.log('Password is required');
       // return this.setState({ error: 'Password is required' });
      }
     if (this.state.username ==="Mary" && this.state.password==="123") {
       console.log("You are in ")
-
+        window.location = '/welcome';
     }
     else{
       console.log("You are not in")
@@ -63,6 +65,8 @@ class LoginPage extends Component {
   }
 
   render() {
+
+
     // NOTE: I use data-attributes for easier E2E testing
     // but you don't need to target those (any css-selector will work)
 
@@ -88,5 +92,6 @@ class LoginPage extends Component {
     );
   }
 }
+
 
 export default LoginPage;
